@@ -44,10 +44,6 @@ function updateClock() {
             lista.classList.toggle('active')
             menu.classList.toggle('active')
             x.classList.toggle('active')
-            clock.classList.toggle('active')
-            tarefa.classList.toggle('active')
-            titulo.classList.toggle('active')
-            paragrafo.classList.toggle('active')
         })
 
         x.addEventListener('click', () => {
@@ -55,10 +51,6 @@ function updateClock() {
             lista.classList.toggle('active')
             menu.classList.toggle('active')
             x.classList.toggle('active')
-            clock.classList.toggle('active')
-            tarefa.classList.toggle('active')
-            titulo.classList.toggle('active')
-            paragrafo.classList.toggle('active')
         })
     }
 
