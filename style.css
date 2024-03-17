@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to top, transparent 0%, black 100%), url('https://w0.peakpx.com/wallpaper/358/358/HD-wallpaper-natureza-solar-forest-green-nature.jpg');
+    background-position: center center;
+    background-size: cover;
+    overflow-y: hidden;
+}
+
+#clock {
+    margin: 40px;
+    width: 150px;
+    color: white;
+    font-size: 2em;
+  }
+
+  #tarefa {
+    background: rgb(2, 158, 179);
+    border-radius: 20px;
+    color: white;
+    width: 90%;
+    height: 150px;
+    margin: auto;
+    position: relative;
+    top: 40vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  #titulo {
+    background: white;
+    color: black;
+    font-size: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    position: relative;
+    border-radius: 20px 20px 0 0;
+  }
+  #paragrafo {
+    background: white;
+    color: black;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    border-radius: 0 0 20px 20px;
+  }
+  #paragrafo2 {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 30%;
+    border-radius: 0 0 20px 20px;
+  }
