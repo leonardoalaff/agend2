@@ -34,11 +34,31 @@ function updateClock() {
         let sabadoDomingo = document.querySelector('#sabado-domingo')
         let lista = document.querySelector('#lista')
         let menu = document.querySelector('#menu')
+        let tabela = document.querySelector('#tabela')
+        let x = document.querySelector('#x')
+        let tarefa = document.querySelector('#tarefa')
+        let titulo = document.querySelector('#titulo')
 
         lista.addEventListener('click', () => {
             sabadoDomingo.classList.toggle('active')
             lista.classList.toggle('active')
             menu.classList.toggle('active')
+            x.classList.toggle('active')
+            clock.classList.toggle('active')
+            tarefa.classList.toggle('active')
+            titulo.classList.toggle('active')
+            paragrafo.classList.toggle('active')
+        })
+
+        x.addEventListener('click', () => {
+            sabadoDomingo.classList.toggle('active')
+            lista.classList.toggle('active')
+            menu.classList.toggle('active')
+            x.classList.toggle('active')
+            clock.classList.toggle('active')
+            tarefa.classList.toggle('active')
+            titulo.classList.toggle('active')
+            paragrafo.classList.toggle('active')
         })
     }
 
