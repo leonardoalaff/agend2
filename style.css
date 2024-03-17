@@ -5,6 +5,7 @@
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
+    overflow-y: hidden;
 }
 
 body {
@@ -13,7 +14,7 @@ body {
     background-image: linear-gradient(to top, transparent 0%, black 100%), url('https://w0.peakpx.com/wallpaper/358/358/HD-wallpaper-natureza-solar-forest-green-nature.jpg');
     background-position: center center;
     background-size: cover;
-    overflow-y: hidden;
+    overflow: hidden;
 }
 
 #clock {
@@ -23,8 +24,17 @@ body {
     font-size: 2em;
   }
 
+  .agenda {
+    width: 100%;
+    text-align: center;
+    color: rgb(173, 170, 170);
+    font-size: 50px;
+    position: absolute;
+    top: 35%;
+  }
+
   #tarefa {
-    background: rgb(2, 158, 179);
+    background: rgb(2, 179, 202);
     border-radius: 20px;
     color: white;
     width: 90%;
@@ -47,15 +57,18 @@ body {
     height: 50%;
     position: relative;
     border-radius: 20px 20px 0 0;
+    font-weight: bold;
   }
   #paragrafo {
     background: white;
-    color: black;
+    color: rgb(87, 87, 87);
     height: 20%;
     display: flex;
     justify-content: center;
     align-items: baseline;
     border-radius: 0 0 20px 20px;
+    position: relative;
+    top: -2px;
   }
   #paragrafo2 {
     color: white;
@@ -66,3 +79,45 @@ body {
     height: 30%;
     border-radius: 0 0 20px 20px;
   }
+
+  nav {
+    background: rgba(0, 0, 0, 0.733);
+    position: absolute;
+    bottom: 2%;
+    width: 20%;
+    height: 10vh;
+    border-radius: 50px;
+    left: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+  }
+  #menu.active {box-shadow: 0 0 40px rgb(2, 235, 243); transition: 0.5s;}
+
+  ul{
+  }
+
+  #lista {
+    color: white;
+    position: relative;
+    top: -2px;
+    font-size: 35px;
+    transition: 0.5s;
+  }
+  #lista.active{color: rgb(0, 255, 242); transition: 0.5s;}
+
+#sabado-domingo {
+  background: rgba(0, 0, 0, 0.822);
+  color: white;
+  height: 90vh;
+  width: 100%;
+  font-size: 12px;
+  text-align: center;
+  columns: 2;
+  position: absolute;
+  top: -5%;
+  transform: translateX(-100%);
+  transition: 0.5s;
+}
+#sabado-domingo.active{transform: translateX(0); transition: 0.5s;}

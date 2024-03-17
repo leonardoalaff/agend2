@@ -31,166 +31,140 @@ function updateClock() {
 
     //**** SÁBADO E DOMINGO ****/
     if ((dayOfWeek === 0 || dayOfWeek === 6)) {
-        document.getElementById("sabado-e-domingo").classList.add("active");
-        let sabadoEDomingo = document.querySelector('#sabado-e-domingo')
-        sabadoEDomingo.scrollIntoView({ behavior: 'smooth' })
-    } else {
-        document.getElementById("sabado-e-domingo").classList.remove("active");
+        let sabadoDomingo = document.querySelector('#sabado-domingo')
+        let lista = document.querySelector('#lista')
+        let menu = document.querySelector('#menu')
+
+        lista.addEventListener('click', () => {
+            sabadoDomingo.classList.toggle('active')
+            lista.classList.toggle('active')
+            menu.classList.toggle('active')
+        })
     }
 
 
 
     
     if ((dayOfWeek === 0 || dayOfWeek === 6) && (hours === 6 && minutes >= 30 && minutes < 60)) {
-        paragrafo.innerHTML = 'Acordar, tomar café'
+        titulo.innerHTML = 'Acordar, tomar café'
+        paragrafo.innerHTML = 'Estudar PHP'
+        paragrafo2.innerHTML = 'Pausa'
     }
 
 
 
 
     if ((dayOfWeek === 0 || dayOfWeek === 6) && (hours === 7 && minutes >= 0 && minutes <= 59) || (hours === 8 && minutes >= 0 && minutes <= 9)) {
-        document.getElementById("sete").classList.add("active");
-        let sete = document.querySelector('#sete')
-        sete.scrollIntoView({ behavior: 'smooth' })
-    } 
-    else {
-        document.getElementById("sete").classList.remove("active");
+        titulo.innerHTML = 'Estudar PHP'
+        paragrafo.innerHTML = 'Pausa'
+        paragrafo2.innerHTML = 'Estudar inglês'
     }
 
 
 
 
     if ((dayOfWeek === 0 || dayOfWeek === 6) && (hours === 8 && minutes >= 10 && minutes <= 29)) {
-        document.getElementById("oito-dez").classList.add("active");
-        let oitoDez = document.querySelector('#oito-dez')
-        oitoDez.scrollIntoView({ behavior: 'smooth' })
-    } else {
-        document.getElementById("oito-dez").classList.remove("active");
+        titulo.innerHTML = 'Pausa'
+        paragrafo.innerHTML = 'Estudar PHP'
+        paragrafo2.innerHTML = 'Pausa'
     }
 
 
 
 
     if ((dayOfWeek === 0 || dayOfWeek === 6) && (hours === 8 && minutes >= 30 && minutes <= 59) || (hours === 9 && minutes >= 0 && minutes <= 9)) {
-        document.getElementById("oito-meia").classList.add("active");
-        let oitoMeia = document.querySelector('#oito-meia')
-        oitoMeia.scrollIntoView({ behavior: 'smooth' })
-    } else {
-        document.getElementById("oito-meia").classList.remove("active");
+        titulo.innerHTML = 'Estudar PHP'
+        paragrafo.innerHTML = 'Pausa'
+        paragrafo2.innerHTML = 'Estudar inglês'
     }
 
 
 
-
     if ((dayOfWeek === 0 || dayOfWeek === 6) && (hours === 9 && minutes >= 10 && minutes <= 29)) {
-        document.getElementById("nove-dez").classList.add("active");
-        let noveDez = document.querySelector('#nove-dez')
-        noveDez.scrollIntoView({ behavior: 'smooth' })
-    } else {
-        document.getElementById("nove-dez").classList.remove("active");
+        titulo.innerHTML = 'Pausa'
+        paragrafo.innerHTML = 'Estudar inglês'
+        paragrafo2.innerHTML = 'Almoçar'
     }
 
 
 
 
     if ((dayOfWeek === 0 || dayOfWeek === 6) && (hours === 9 && minutes >= 30 && hours < 11) || (hours === 10 && minutes >= 0 && minutes <= 59)) {
-        document.getElementById("nove-meia").classList.add("active");
-        let noveMeia = document.querySelector('#nove-meia')
-        noveMeia.scrollIntoView({ behavior: 'smooth' })
-    } else {
-        document.getElementById("nove-meia").classList.remove("active");
+        titulo.innerHTML = 'Estudar inglês'
+        paragrafo.innerHTML = 'Almoçar'
+        paragrafo2.innerHTML = 'Trabalhar em algum projeto'
     }
 
 
 
 
     if ((dayOfWeek === 0 || dayOfWeek === 6) && (hours === 11 && minutes >= 0 && minutes <= 59)) {
-        document.getElementById("onze").classList.add("active");
-        let onze = document.querySelector('#onze')
-        onze.scrollIntoView({ behavior: 'smooth' })
-    } else {
-        document.getElementById("onze").classList.remove("active");
+        titulo.innerHTML = 'Almoçar'
+        paragrafo.innerHTML = 'Trabalhar em algum projeto'
+        paragrafo2.innerHTML = 'Cuidar da aparência'
     }
 
 
 
 
     if ((dayOfWeek === 0 || dayOfWeek === 6) && (hours === 12 && minutes >= 0 && minutes <= 59) || (hours === 13 && minutes >= 0 && minutes <= 59)) {
-        document.getElementById("meio-dia").classList.add("active");
-        let meioDia = document.querySelector('#meio-dia')
-        meioDia.scrollIntoView({ behavior: 'smooth' })
-    }
-    else {
-        document.getElementById("meio-dia").classList.remove("active");
+        titulo.innerHTML = 'Trabalhar em algum projeto'
+        paragrafo.innerHTML = 'Cuidar da aparência'
+        paragrafo2.innerHTML = 'Lazer'
     }
 
 
 
 
     if ((dayOfWeek === 0 || dayOfWeek === 6) && (hours === 14 && minutes >= 0 && minutes <= 59)) {
-        document.getElementById("duas-horas").classList.add("active");
-        let duasHoras = document.querySelector('#duas-horas')
-        duasHoras.scrollIntoView({ behavior: 'smooth' })
-    } else {
-        document.getElementById("duas-horas").classList.remove("active");
+        titulo.innerHTML = 'Cuidar da aparência'
+        paragrafo.innerHTML = 'Lazer'
+        paragrafo2.innerHTML = 'Banho'
     }
 
 
 
 
     if ((dayOfWeek === 0 || dayOfWeek === 6) && (hours === 15 && minutes >= 0 && minutes <= 59) || (hours === 16 && minutes >= 0 && minutes <= 59)) {
-        document.getElementById("tres-horas").classList.add("active");
-        let tresHoras = document.querySelector('#tres-horas')
-        tresHoras.scrollIntoView({ behavior: 'smooth' })
-    }
-    else {
-        document.getElementById("tres-horas").classList.remove("active");
+        titulo.innerHTML = 'Lazer'
+        paragrafo.innerHTML = 'Banho'
+        paragrafo2.innerHTML = 'Estudar JavaScript'
     }
 
 
 
 
     if ((dayOfWeek === 0 || dayOfWeek === 6) && (hours === 17 && minutes >= 0 && minutes <= 59)) {
-        document.getElementById("cinco-horas").classList.add("active");
-        let cincoHoras = document.querySelector('#cinco-horas')
-        cincoHoras.scrollIntoView({ behavior: 'smooth' })
-    } else {
-        document.getElementById("cinco-horas").classList.remove("active");
+        titulo.innerHTML = 'Banho'
+        paragrafo.innerHTML = 'Estudar JavaScript'
+        paragrafo2.innerHTML = 'Jantar'
     }
 
 
 
 
     if ((dayOfWeek === 0 || dayOfWeek === 6) && (hours === 18 && minutes >= 0 && minutes <= 59) || (hours === 19 && minutes >= 0 && minutes <= 59)) {
-        document.getElementById("zeis-horas").classList.add("active");
-        let zeisHoras = document.querySelector('#zeis-horas')
-        zeisHoras.scrollIntoView({ behavior: 'smooth' })
-    }
-    else {
-        document.getElementById("zeis-horas").classList.remove("active");
+        titulo.innerHTML = 'Estudar JavaScript'
+        paragrafo.innerHTML = 'Jantar'
+        paragrafo2.innerHTML = 'Dormir'
     }
 
 
 
 
     if ((dayOfWeek === 0 || dayOfWeek === 6) && (hours === 20 && minutes >= 0 && minutes <= 59) || (hours === 21 && minutes >= 0 && minutes <= 59)) {
-        document.getElementById("oito-horas").classList.add("active");
-        let oitoHoras = document.querySelector('#oito-horas')
-        oitoHoras.scrollIntoView({ behavior: 'smooth' })
-    }
-    else {
-        document.getElementById("oito-horas").classList.remove("active");
+        titulo.innerHTML = 'Jantar'
+        paragrafo.innerHTML = 'Dormir'
+        paragrafo2.innerHTML = 'Fim do dia'
     }
 
 
 
 
     if ((dayOfWeek === 0 || dayOfWeek === 6) && (hours === 22 && minutes >= 0 && minutes <= 59)) {
-        document.getElementById("dez-horas").classList.add("active");
-        let dezHoras = document.querySelector('#dez-horas')
-        dezHoras.scrollIntoView({ behavior: 'smooth' })
-    } else {
-        document.getElementById("dez-horas").classList.remove("active");
+        titulo.innerHTML = 'Dormir'
+        paragrafo.innerHTML = 'Fim do dia'
+        paragrafo2.innerHTML = 'Fim do dia'
     }
 
 
